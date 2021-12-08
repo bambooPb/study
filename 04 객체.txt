@@ -1,0 +1,109 @@
+객체란?
+  자바스크립트는 객체(object) 기반 언어이다. 객체는 기능(Method)과 속성(Property)을 가지고 있다.
+
+  ▷ 내장 객체
+
+    참조 변수(인스턴스 이름) = new 생성 함수()
+    
+    · 날짜 관련 메서드
+
+      - get (날짜 정보 가져올 때)
+
+      getFullYear()     연도 정보를 가져옴
+      getMonth()        월 정보를 가져옴(현재 월-1)
+      getDate()         일 정보를 가져옴
+      getDay()          요일 정보를 가져옴(일:0 ~ 토:6)
+      getHours()        시 정보를 가져옴
+      getMinutes()      분 정보를 가져옴
+      getSecond()       초 정보를 가져옴
+      getMillseconds()  밀리초 정보를 가져옴(1/1000초 단위)
+      getTime()         1970년 1월 1일부터 경과된 시간을 밀리초로 표기함
+      toGMTString()     GMT 표준 표기 방식으로 문자형 데이터로 반환함
+
+      - set (날짜 정보 수정할 때)
+
+      setFullYear()     연도 정보만 수정함
+      setMonth()        월 정보만 수정함(월-1)
+      setDate()         일 정보만 수정함
+      setHours()        시 정보만 수정함
+      setMinutes()      분 정보만 수정함
+      setSeconds()      초 정보만 수정함
+      setMillseconds()  밀리초 정보만 수정함
+      setTime()         1970년 1월 1일부터 경과된 시간을 밀리초로 수정함
+      toLocaleString()  운영 시스템 표기 방식으로 문자형 데이터로 반환함
+
+    · 수학 객체 관련 메서드
+
+      Math.abs(숫자)                       숫자의 절댓값을 반환
+      Math.max(숫자1, 숫자2, 숫자3, 숫자4)  숫자 중 가장 큰 값을 반환
+      Math.min(숫자1, 숫자2, 숫자3, 숫자4)  숫자 중 가장 작은 값을 반환
+      Math.pow(숫자, 제곱값)               숫자의 거듭제곱값을 반환
+      Math.random(숫자)                    0~1 사이의 난수를 반환
+      Math.ceil(숫자)                      소수점 첫째 자리에서 무조건 올림
+      Math.floor(숫자)                     소수점 첫째 자리에서 무조건 내림
+      Math.sqrt(숫자)                      숫자 제곱근값을 반환
+      Math.PI                              원주율 상수를 반환
+      Math.random()*숫자                    0부터 숫자까지 중 난수 반환
+
+        ※ random()를 이용하여 원하는 구간 정수의 값 구하기
+        Math.floor(Math.random() * (최댓값 - 최솟값 + 1)) + 최솟값
+
+    · 배열 객체 관련 메서드
+
+      join(연결 문자)        배열 객체의 데이터를 연결 문자 기준으로 1개의 문자형 데이터로 반환
+      reverse()             배열 객체의 데이터 순서를 거꾸로 바꾼 후 반환
+      sort()                배열 객체의 데이터를 오름차순으로 정렬
+      slice(index1, index2) 배열 객체의 데이터 중 원하는 인덱스 구간만큼 잘라서 배열 객체로 가져옴
+      splice()              배열 객체의 지정 데이터를 삭제하고 그 구간에 새 데이터를 삽입
+      concat()              2개의 배열 객체를 하나로 결합
+      pop()                 배열에 저장된 데이터 중 첫 번째 인덱스에 저장된 데이터를 삭제
+      push(new data)        배열 객체의 마지막 인덱스에 새 데이터를 삽입
+      shift()               배열 객체의 가장 앞의 인덱스에 새 데이터를 삽입
+      unshift(new data)     배열 객체의 가장 앞의 인덱스에 새 데이터를 삽입
+      length                배열에 정자된 총 데이터의 개수를 반환 
+
+    · 문자열 객체 관련 메서드
+
+      charAt(index) 문자열에서 인덱스 번호에 해당하는 문자를 반환
+        ex) var str = "web he she"; str.charAt(2); -> "b" 반환 (인덱스는 0부터 시작)
+
+      indexOf("찾을 문자") 문자열에서 오른쪽부터 찾을 문자와 일치하는 문자를 찾아 제일 먼저 일치하는 문자의 인덱스 번호를 반환,
+                          만일 찾는 문자가 없으면 -1을 반환
+        ex) var str = "web he she he"; str.indexOf("he"); -> 4를 반환
+      
+      lastIndexOf("찾을 문자") 문자열에서 오른쪽부터 찾을 문자와 일치하는 문자를 찾아 제일 먼저 일치하는 문자의 인덱스 번호를 반환,
+                              만일 찾는 문자가 없으면 -1을 반환
+        ex) var str = "web he she he"; str.lastIndexOf("he"); -> 11를 반환
+
+      match("찾을 문자")  문자열에서 왼쪽부터 찾을 문자와 일치하는 문자를 찾아 제일 먼저 찾은 문자를 반환,
+                          만일 찾는 문자가 없으면 null을 반환
+        ex) var str = "web he she he"; str.match("boy");  ->  null을 반환
+
+      replace("바꿀 문자", "새 문자")  문자열에서 왼쪾부터 바꿀 문자와 일치하는 문자를 찾아 제일 먼저 찾은 문자를 새 문자로 치환
+        ex) var str = "web he she"; str.replace("web", "html");  ->  "html he she"을 반환
+
+      search("찾을 문자")  문자열에서 왼쪽부터 찾을 문자와 일치하는 문자를 찾아 제일 먼저 일치하는 인덱스 번호를 반환
+        ex) var str = "web he she"; str.search("he");  ->  4를 반환
+      
+      slice(a, b)  a개의 문자를 자르고 b번째 이후에 문자를 자른 후 남은 문자를 반환
+
+      substring(a, b) a 인덱스부터 b 인덱스 이전 구간의 문자를 반환
+
+      substr(a, 문자 개수)  문자열에 a 인덱스부터 지정한 문자 개수만큼 문자열을 반환
+
+      split("문자") 지정한 문자를 기준으로 문자 데이터를 나누어 배열에 저장하여 반환
+
+      toLowerCase() 문자열에서 영문 대문자를 모두 소문자로 바꿈
+
+      toUpperCase() 문자열에서 영문 소문자를 모두 대문자로 바꿈
+
+      length 문자열에서 문자의 개수를 반환
+
+      concat("새로운 문자") 문자열에 새로운 문자열을 결합
+
+      charCodeAt(index) 문자열 index에 해당 문자의 아스키 코드값을 반환
+
+      fromCharCode  아스키 코드값에 해다아는 문자를 반환
+
+      trim() 문자의 앞 또는 뒤에 공백 문자열을 삭제
+      
