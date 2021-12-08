@@ -1,0 +1,114 @@
+자바스크립트 기초 문법
+
+  ▷ 자바스크립트 주석처리
+
+    //한 줄 설명글인 경우
+    /* 설명글이 여러줄인 경우 
+      이렇게 처리합니다.
+    */
+
+  ▷ 변수
+    기본형 : var 변수명 or var 변수명 = 변수값
+
+  ▷ 연산자
+
+    1) 산술 연산자
+      + - * / %(나머지값)
+
+    2) 문자 결합 연산자
+      ex)
+      <script>
+        var t1 = "학교종이";
+        var t2 = " 땡땡땡 ";
+        var t3 = "8282";
+        var t4 = " 어서 모이자";
+        var result;
+
+        result = t1 + t2 + t3 + t4;
+        document.write(result); //학교종이 땡땡땡 8282 어서 모이자
+      </script>
+
+    3) 대입 연산자
+      ex)
+      <script>
+        var num1 = 10;
+        var num2 = 3;
+
+        num1 += num2; 
+        document.write(num1,"<br>"); //13
+
+        num1 -= num2;
+        document.write(num1,"<br>"); //10
+
+        num1 *= num2;
+        document.write(num1,"<br>"); //30
+
+        num1 %= num2;
+        document.write(num1,"<br>"); //0
+      </script>
+
+      대입 연산자를 사용하면 num1의 변수값이 바뀐다
+
+    4) 증감 연산자
+
+      증감 연산자는 변수의 값에 붙으면 1씩 증가하거나 감소한다
+      
+      ex)
+      var A = 10;
+      A++; , ++A; = 11 / A--; , --A; = 9
+
+      var result = ++A; // result:11 A:11
+      "++A"의 값이 도출된 후 "result"값이 나타난다.
+      var result = A++; // result:11 A:12
+      "A"의 값이 "result"값에 대입된 후 "A"값은 1이 증가한다.
+
+      ex)
+      <script>
+        var num1 = 10;
+        var num2 = 20;
+        var result;
+
+        num1--; //9
+        document.write(num1,"<br>");
+
+        num1++; //10
+        document.write(num1,"<br>");
+
+        result = num2++; //result: 20, num2:21
+        document.write(result,"<br>");
+
+        result = 2++num; //result: 22, num2:22
+        document.write(result,"<br>");
+      </script>
+
+    5) 비교 연산자
+
+      A==B A와B는 같다 ("10" 와 10의 값은 true)
+      A!=B A와B는 다르다 ("10" 와 10의 값은 false)
+      A===B A와B는 같다 ("10" 와 10의 값은 false)
+      A!==B A와B는 다르다 ("10" 와 10의 값은 true)
+
+    6) 논리 연산자
+
+      || - or연산자
+      && - and연산자
+      ! - not연산자
+
+    7) 삼항 조건 연산자
+      ex)
+      <script>
+        var a = 10;
+        var b = 3;
+        
+        var result = a > b ? "javascript" : "hello";
+        document.write(result); //
+      </script>
+
+      조건식 ? 코드1 : 코드2
+      -> 조건식이 맞으면 코드1이 나타나고 틀리면 코드2가 나타난다.
+
+
+
+
+      
+
