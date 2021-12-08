@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>기초 문법</title>
+</head>
+<body>
+  <h2>write 사용</h2>
+  <script>
+    document.write("환영합니다");
+  </script>
+
+  <h2>변수</h2>
+  <script>
+    var box;
+    box = 100;
+    box = 30;
+    document.write(box); //나중에 선언된 값이 나타남
+  </script>
+
+  <h2>연산자</h2>
+  <script>
+    document.write("var num1 = 15;","<br>", "var num2 = 2;" ,"<br>", "var result;","<br>","<br>");
+    var num1 = 15;
+    var num2 = 2;
+    var result;
+
+    document.write("num1 + num2 = ");
+    result = num1 + num2;
+    document.write(result,"<br>"); // 17
+
+    document.write("num1 - num2 = ");
+    result = num1 - num2;
+    document.write(result,"<br>"); // 13
+
+    document.write("num1 * num2 = ");
+    result = num1 * num2;
+    document.write(result,"<br>"); // 30
+
+    document.write("num1 / num2 = ");
+    result = num1 / num2;
+    document.write(result,"<br>"); // 7.5
+
+    document.write("num1 % num2 = ");
+    result = num1 % num2;
+    document.write(result,"<br>"); // 1
+  </script>
+
+  <h2>대입연산자</h2>
+  <p>대입 연산자 사용시 변수값이 변경</p>
+  <script>
+    document.write("var num1 = 10;","<br>","var num2 = 3;","<br>","<br>");
+    var num1 = 10;
+    var num2 = 3;
+
+    document.write("num1 += num2 ", "-> ")
+    num1 += num2;
+    document.write(num1,"<br>");
+    document.write("num1 = 13","<br>","<br>");
+
+    document.write("num1 -= num2 ", "-> ")
+    num1 -= num2;
+    document.write(num1,"<br>");
+    document.write("num1 = 10","<br>","<br>");
+
+    document.write("num1 *= num2 ", "-> ")
+    num1 *= num2;
+    document.write(num1,"<br>");
+    document.write("num1 = 30","<br>","<br>");
+
+    document.write("num1 %= num2 ", "-> ")
+    num1 %= num2;
+    document.write(num1,"<br>");
+    document.write("num1 = 0","<br>","<br>");
+  </script>
+
+  <h2>증감연산자</h2>
+  <p></p>
+</body>
+</html>
