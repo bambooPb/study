@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>익명 함수 선언 참조 방식</title>
+</head>
+<body>
+  <script>
+    var count = 0
+
+    myFnc();    //함수 호출문이 먼저 나와도 호이스팅 방식 적용, 정상적으로 함수 호출
+
+    function myFnc(){
+      count++;
+      document.write("hello" + count, "<br>");
+    }
+
+    myFnc();
+
+    var theFnc = function(){
+      count++;
+      document.write("bye" + count, "<br>");
+    }
+
+    theFnc();
+  </script>
+</body>
+</html>
