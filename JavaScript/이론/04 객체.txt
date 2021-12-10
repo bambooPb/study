@@ -103,7 +103,79 @@
 
       charCodeAt(index) 문자열 index에 해당 문자의 아스키 코드값을 반환
 
-      fromCharCode  아스키 코드값에 해다아는 문자를 반환
+      fromCharCode  아스키 코드값에 해당하는 문자를 반환
 
       trim() 문자의 앞 또는 뒤에 공백 문자열을 삭제
-      
+
+  ▷ 브라우저 객체 모델
+
+     · window 객체
+
+      open("URL", "새 창 이름", "새 창 옵션)  URL 페이지를 새 창으로 나타냅니다.
+        ex)
+        window.open("http://www.easyspub.com/", "easysub", "width = 350, height = 400, left = 50, top = 10, scrollbar = no");
+
+      alert(data) 경고 창을 나타내고 데이터를 보여줌
+        ex) alert("경고 메세지)
+
+      prompt("질문", "답변")   질문과 답변으로 질의응답 창을 나타냄
+        ex) prompt("당신의 연령은?", "0")
+
+      confirm("질문 내용")  질문 내용으로 확인이나 취소 창을 나타냄
+        ex) confirm("정말로 삭제하시겠습니까?")
+
+      moveTo(x, y)  지정한 새 창의 위치를 이동
+
+      resizeTo(width, height) 지정한 새 창의 크기를 변경
+
+      setInterval(function(){자바스크립트 코드}, 일정 시간 간격)  지속적으로 일정한 시간 간격으로 함수를 호출하여 코드 실행
+        ex) var 참조 변수 = setInterval(function() {코드}, 시간 간격(ms));
+            var 참조 변수 = setInterval("코드", 시간 간격(ms));
+
+            var intv = setInterval(function() {i++;}, 3000);
+            var intv = setInterval("i++", 3000);  //3000 = 3s
+
+      setTimeout(function(){자바스크립트 코드}, 일정 시간 간격) 단 한 번 일정한 시간 간격으로 함수를 호출하여 코드 실행
+        ex) var 참조 변수 = setTimeout(function(){자바스크립트 코드}, 시간 간격(msc));
+            var 참조 변수 = setTimeout("자바스크립트 코드", 시간 간격(msc));
+
+            var tim = setTimeout(function() {i++;}, 5000);
+            var tim = setTimeout("i++', 5000);
+
+    · screen 객체 - 모니터의 너비나 높이 또는 컬러 표현하는 객체
+
+      screen.width / screen.height / screen.availWidth(작업표시줄 제외한 너비) / screen.availHeight(작업표시줄 제외한 높이) / screen.colorDepth (표현 가능한 컬러 bit 반환)
+
+    · location 객체
+
+      location.href 참조 주소 설정이나 URL 반환
+      location.hash URL의 #에 명시된 값을 반환
+      location.hostname URL의 호스트 이름을 설정하거나 반환
+      location.host URL의 호스트 이름과 포트 번호를 반환
+      location.protocol URL의 프로토콜을 반환
+      location.search URL의 쿼리 반환
+      location.reload() 새로고침
+
+    · history 객체
+
+      history.back()  이전 방문 사이트로 이동
+      history.forward() 다음 방문 사이트로 이동
+      history.go(이동 숫자) 이동 숫자에 -2를 입력하면 2단계 이전의 방문 사이트로 이동
+      history.length  방문 기록에 저장된 목록의 개수 반환
+
+    · navigator 객체
+
+      navigator.appCodeName 현재 브라우저의 코드명을 반환, 현 시점의 모든 브라우저는 "Mozila"를 반환
+      navigator.appName 현재 브라우저의 이름을 반환, 현 시점의 모든 브라우저는 "Nerscape"를 반환
+      navigator.appVersion  현재 브라우저의 버전 정보를 반환, 현 시점의 모든 브라우저는 "5.0(Windows)"를 반환
+      navigator.language  현재 브라우저가 사용하고 있는 언어 반환, 한국어를 사용할 경우에는 "ko"를 반환
+      navigator.product 현재 브라우저의 엔진 이름 반환, 크롬의 경우 "Gecko"를 반환
+      navigator.platform  현재 컴퓨터의 운영체제 정보 제공, 브라우저가 32비트로 설치되었다면 Win32로 나타남
+      navigator.onLine  온라인 상태 여부에 대한 정보 제공, 인터넷이 정상적으로 연결되었다면 true값을 반환
+      navigator.userAgent 브라우저와 운영체제의 종합 정보를 제공
+
+    
+
+
+
+
