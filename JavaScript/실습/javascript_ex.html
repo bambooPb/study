@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Study</title>
+</head>
+<body>
+  <header>
+    <h1 style="color:red">요소(노드) 접근하기</h1>
+  </header>
+  <section>
+    <h2>HTML5에 추가된 요소</h2>
+      <ul>
+        <li>section</li>
+        <li>article</li>
+        <li>nav</li>
+        <li>aside</li>
+      </ul>
+
+      <form action="" name="test_frm">
+        <label for="">이름 : 
+          <input type="text" name="name" />
+          <input type="button" value="전송" onclick="btnClick" />
+        </label>
+
+        <div></div>
+        <div>하이2</div>
+      </form>
+  </section>
+
+<script>
+  
+  function btnClick() {
+    var aa = document.getElementsByTagName("div")[1];
+    aa.innerHTML = "하이1";
+  }
+  console.log(btnClick);
+</script>
+</body>
+</html>
