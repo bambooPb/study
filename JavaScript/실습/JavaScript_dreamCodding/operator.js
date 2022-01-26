@@ -69,7 +69,7 @@ const numberFive = 5;
 console.log(stringFive == numberFive); // true
 console.log(stringFive != numberFive); // false
 
-// == strict equality 타입까지 신경써서 검사
+// === strict equality 타입까지 신경써서 검사
 console.log(stringFive === numberFive); // false
 console.log(stringFive !== numberFive); // true
 
